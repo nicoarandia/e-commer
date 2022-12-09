@@ -1,0 +1,24 @@
+.form-create{
+    color: rgb(247, 244, 246);
+    background-color: rgba(46, 45, 45, 0.8);
+    border: #b850e9;
+    justify-content: center;
+    display: flex;  
+    flex-direction: column;
+    width:100%;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 80%;
+    border-radius: 10px;
+}
+.container-form-create{
+    background-color: rgb(11, 70, 138);
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 80%;
+}
+
+.btn-submit{
+    margin: 0 auto;
+    display: inline-block;
+}

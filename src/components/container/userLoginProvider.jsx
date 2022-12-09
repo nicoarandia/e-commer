@@ -13,13 +13,14 @@ export function useUserToggleContext() {
 }
 
 
+
 const UserLoginProvider = (props) => {
 
     
     const [user, setUser] = useState({state:0});
     
     const cambiaLogin = () => {
-        if (user) {
+        if (user.state === 0) {
             setUser({state:1});
             alert(" Inicio de seccion exitoso ")
         }

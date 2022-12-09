@@ -1,17 +1,16 @@
-import React,{useState} from 'react';
+import React from 'react';
 import CarouselComponent from '../pure/carousel';
 import NavBar from '../pure/navBar';
-import SearchProduct from '../pure/searchProduct';
+import ContainerCards from './containerCards';
+
 
 const HomeProducts = () => {
-
-    const [products, setProducts] = useState(null);
 
     return (
         <div>
             <NavBar/>
             <CarouselComponent></CarouselComponent>
-            <SearchProduct/>
+            <ContainerCards></ContainerCards>
         </div>
     );
 }

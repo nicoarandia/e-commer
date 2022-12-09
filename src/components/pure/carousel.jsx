@@ -1,8 +1,8 @@
 import React from "react";
 import Carousel from 'react-bootstrap/Carousel';
-import vestite from '../../images/carouselImages/image1.jpg'
-import vestiteLinda from '../../images/carouselImages/image2.jpg'
-import makeUpp from '../../images/carouselImages/image3.jpg'
+import vestite from '../../images/carouselImages/corazon.jpg'
+import vestiteLinda from '../../images/carouselImages/mensaje.jpg'
+import makeUpp from '../../images/carouselImages/gritando.jpg'
 import Image from 'react-bootstrap/Image'
 import '../../style/styleCarousel.css'
 

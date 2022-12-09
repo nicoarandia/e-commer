@@ -5,9 +5,16 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { useUserToggleContext } from '../container/userLoginProvider';
+import {Link} from 'react-router-dom'
+
 
 
 const NavBar = () => {
+
+  const cambiaLogin=useUserToggleContext();
+  
+
     return (
 
         
@@ -21,7 +28,7 @@ const NavBar = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home Page</Nav.Link>
+            <Nav.Link href="/homePag">Home Page</Nav.Link>
             <Nav.Link href="#action2">Ofertas</Nav.Link>
             <NavDropdown title="Productos" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Pantalones</NavDropdown.Item>
@@ -29,9 +36,9 @@ const NavBar = () => {
                 Camisas
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Comentarios
-              </NavDropdown.Item>
+              <Link to="/create">
+                Agregar Producto
+              </Link>
             </NavDropdown>
             <Nav.Link href="#" disabled>
               Contacto 
@@ -45,7 +52,7 @@ const NavBar = () => {
               aria-label="Search"
             />
             <Button variant="outline-success">Buscar</Button>
-            <Button variant="outline-danger">Salir</Button>{' '}
+            <Button variant="outline-danger" href='/' onClick={cambiaLogin}>Salir</Button>
           </Form>
         </Navbar.Collapse>
       </Container>

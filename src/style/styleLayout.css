@@ -1,0 +1,21 @@
+.layout{
+    width: 100%;
+    margin-top: 5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    
+}
+.container-layout{
+    background-color: #8ccfd8;
+    padding: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.link-layout{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    color: black;
+    size: 100px
+}

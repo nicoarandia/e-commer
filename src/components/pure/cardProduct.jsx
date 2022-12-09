@@ -1,4 +1,8 @@
 import React from 'react';
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
+import { Link } from 'react-router-dom';
+import '../../style/styleCardProduct.css'
 
 const CardProduct = ({product}) => {
 
@@ -6,19 +10,28 @@ const CardProduct = ({product}) => {
         currentTarget.onerror = null; // prevents looping
         currentTarget.src="logo192.png";
     }
-
+    
+    
     return (
-        <div className="card" style={{width: "50rem" , padding: "200px"}} >
-            <img src={product.image_link} className="card-img-top" alt="Imagen not found" onError={handleError} />
-            <div className="card-body">
-                <h5 className="card-title">{product.name}</h5>
-            <p  className="card-text">
-                {product.description}
-            </p>
-            <button className="btn btn-primary">
-                See more
-            </button>
-            </div>
+        <div className='cardProduct'>
+            <Card style={{ width: '18rem' }}>
+            <Link to={`/product/${product.id}`}>
+        <Card.Img variant="top" src={product.cover} onError={handleError} />
+            </Link>
+        <Card.Body>
+            <Card.Title>{product.title}</Card.Title>
+            <Card.Text>
+            {product.description}
+            </Card.Text>
+        </Card.Body>
+        <ListGroup className="list-group-flush">
+            <ListGroup.Item>${product.precio}</ListGroup.Item>
+            <ListGroup.Item>Numero de Prenda:{product.id}</ListGroup.Item>
+        </ListGroup>
+        <Card.Body>
+            <Link to={`/product/${product.id}`}>Ver Producto</Link>
+        </Card.Body>
+        </Card>
         </div>
     );  
 }

@@ -18,15 +18,12 @@ const LoginForm = () => {
     }
 
     console.log("hola mundo",user)
+    
 
-
-    if(user && user.state){
+    if(user && (user.state === 1)){
         return(
         <div>
             <HomeProducts></HomeProducts>
-            <button className="btn-submit" onClick={cambiaLogin} >
-                        Salir
-            </button>
         </div>
             
         )
@@ -50,7 +47,7 @@ const LoginForm = () => {
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="No soy un robot" />
                 </Form.Group>
-                <Button variant="primary" type="submit" onClick={cambiaLogin} onSubmit={successLogin}>
+                <Button variant="primary"  onClick={cambiaLogin} >
                     Login
                 </Button>
                 </Form>
