@@ -16,27 +16,33 @@ const Articulo = () => {
         setProduct(product)
     }, []);
 
+    
+
     if(!product){
         return(
-            <Layout>Producto No encontrado</Layout>
-        )
+            <Layout>
+                <h2>
+                    Producto No encontrado
+            </h2>
+            </Layout>
+        )   
     }
 
     return (
         <Layout>
-            <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={product?.corver} />
-      <Card.Body>
-        <Card.Title>{product?.title}</Card.Title>
-        <Card.Text>
-            {product?.description}
-        </Card.Text>
-      </Card.Body>
-      <ListGroup className="list-group-flush">
-        <ListGroup.Item>Precio: $  {product?.precio}</ListGroup.Item>
-      </ListGroup>
-      
-    </Card>
+
+        <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" src={product?.cover} />
+        <Card.Body>
+            <Card.Title>{product?.title}</Card.Title>
+            <Card.Text>
+            {product?.description}   
+            </Card.Text>
+        </Card.Body>
+        <ListGroup className="list-group-flush">
+            <ListGroup.Item>Precio: $  {product?.precio}</ListGroup.Item>
+        </ListGroup>
+        </Card> 
         </Layout>
     );
 }

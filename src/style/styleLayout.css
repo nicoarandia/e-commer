@@ -1,21 +1,29 @@
 .layout{
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-left: 1rem;
     margin-right: 1rem;
+    flex-direction:row;
+    display: flex;
     
 }
 .container-layout{
-    background-color: #8ccfd8;
-    padding: 60px;
+    background-color: #0c8797;
+    padding: 0px;
     width: 100%;
-    display: flex;
+    height: 80px;
     justify-content: center;
+    background-size: 1rem;
+    
 }
 .link-layout{
-    text-align: center;
+    text-align:left;
     justify-content: center;
     display: flex;
-    color: black;
-    size: 100px
+    color: white;
+    size: 100px;
+    border-bottom: 20rem;
+    flex-direction:row-reverse;
+    text-decoration:dashed;
+    
 }

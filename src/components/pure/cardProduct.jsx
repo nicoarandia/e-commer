@@ -8,7 +8,7 @@ const CardProduct = ({product}) => {
 
     const handleError = ({ currentTarget }) => {
         currentTarget.onerror = null; // prevents looping
-        currentTarget.src="logo192.png";
+        currentTarget.src="image/remeraOscura.jpg";
     }
     
     
@@ -19,7 +19,7 @@ const CardProduct = ({product}) => {
         <Card.Img variant="top" src={product.cover} onError={handleError} />
             </Link>
         <Card.Body>
-            <Card.Title>{product.title}</Card.Title>
+            <Card.Title>{product.title}{console.log(product.title)}</Card.Title>
             <Card.Text>
             {product.description}
             </Card.Text>
@@ -27,6 +27,12 @@ const CardProduct = ({product}) => {
         <ListGroup className="list-group-flush">
             <ListGroup.Item>${product.precio}</ListGroup.Item>
             <ListGroup.Item>Numero de Prenda:{product.id}</ListGroup.Item>
+            <ListGroup.Item>
+                <Card.Title>
+                    {product.oferta? ("En OFERTA"):("Disponible")}
+                    {console.log(product.oferta)}
+                </Card.Title>
+            </ListGroup.Item>
         </ListGroup>
         <Card.Body>
             <Link to={`/product/${product.id}`}>Ver Producto</Link>

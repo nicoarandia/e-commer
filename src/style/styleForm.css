@@ -3,10 +3,12 @@
     background-color: rgba(46, 45, 45, 0.8);
     border: #b850e9;
     align-items: center;
-    justify-content: center;
+    justify-content:end;
     display: flex;
     flex-direction: column;
     width:50%;
+    margin-top: 5rem;
+
 }
 
 .mb-3{
@@ -16,5 +18,9 @@
 .container{
     background-image:url("../../public/image/images2.jpg");
     background-size: 100%;
-    padding:145px;
+    padding:148px;
+    align-items: center;
+    justify-content:end;
+    display: flex;
+    
 }

@@ -1,4 +1,6 @@
 import React,{useState,useContext} from 'react';
+import remera from "../images/productsImages/remeraOscura.jpg"
+import buso from "../images/productsImages/buso.jpg"
 
 const appContext = React.createContext({
     products:[],
@@ -14,7 +16,17 @@ export function useAppContext(){
 
 const StoreProducts = ({children}) => {
 
-    const [products, setProducts] = useState([]);
+    const objeto={
+        id:crypto.randomUUID(),
+        title:'Remera',
+        oferta: false ,
+        cover:{remera},
+        precio:1000,
+        description:"Es una remera oscura con un dibujo simple",
+        }
+        
+
+    const [products, setProducts] = useState([objeto]);
 
     const createProduct = (product) => {
         const temp= [...products];

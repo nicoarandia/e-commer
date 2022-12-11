@@ -25,7 +25,6 @@ const LoginForm = () => {
         <div>
             <HomeProducts></HomeProducts>
         </div>
-            
         )
     }else{
         return(
@@ -51,8 +50,7 @@ const LoginForm = () => {
                     Login
                 </Button>
                 </Form>
-
-                
+    
             </div>
             
         )

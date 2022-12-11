@@ -7,6 +7,8 @@ import CardProduct from './components/pure/cardProduct';
 import StoreProducts from './store/storeProducts';
 import CreateProduct from './components/pure/form/createProduct';
 import Articulo from './components/pure/articulo';
+import ContainerCards from './components/container/containerCards';
+import OfertasProduct from './components/container/ofertasProduct';
 
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
           <Route path='/create' element={<CreateProduct/>} />
           <Route path='/container/CardProduct' element={<CardProduct/>} />
           <Route path='/product/:cardId' element={ <Articulo/>}/>
+          <Route path='/products' element={<ContainerCards/>}/>
+          <Route path='/oferta' element={<OfertasProduct/>}/>
 
         </Routes>
     </BrowserRouter>

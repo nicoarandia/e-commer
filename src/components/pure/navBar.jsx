@@ -6,13 +6,23 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useUserToggleContext } from '../container/userLoginProvider';
-import {Link} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 
 
 const NavBar = () => {
 
   const cambiaLogin=useUserToggleContext();
+
+  const navigate=useNavigate()
+
+  const handleClickOferta = (e) => {
+    navigate("/oferta")
+  }
+
+  const handleClickHomePage = (e) =>{
+    navigate("/homePag")
+  }
   
 
     return (
@@ -28,19 +38,17 @@ const NavBar = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="/homePag">Home Page</Nav.Link>
-            <Nav.Link href="#action2">Ofertas</Nav.Link>
+            <Nav.Link href="#action1" onClick={handleClickHomePage}>Home Pag</Nav.Link>
+            <Nav.Link href="#action2" onClick={handleClickOferta}>Ofertas</Nav.Link>
             <NavDropdown title="Productos" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Pantalones</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
                 Camisas
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <Link to="/create">
-                Agregar Producto
-              </Link>
+              <NavDropdown.Item href="#action5" onClick={navigate("/create")}>Agregar Productos</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" disabled>
+            <Nav.Link href='https://wa.me/3884852357'>
               Contacto 
             </Nav.Link>
           </Nav>

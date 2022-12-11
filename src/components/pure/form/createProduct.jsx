@@ -7,6 +7,7 @@ import { useAppContext } from '../../../store/storeProducts';
 import { useNavigate } from 'react-router-dom';
 import Layout from '../../container/layout';
 
+
 const CreateProduct = () => {
 
     const [title, setTitle] = useState('');
@@ -81,7 +82,7 @@ const CreateProduct = () => {
         store.createProduct(newProduct);
         navigate("/homePag")
     }
-
+    
 
     return (
         <Layout>
@@ -91,7 +92,7 @@ const CreateProduct = () => {
                 <InputGroup.Text id="basic-addon1" >Titulo</InputGroup.Text>
             <Form.Control
                 type='text'  
-                placeholder="Nombre del producto"
+                placeholder="Nombre del producto" 
                 aria-label="Username"
                 aria-describedby="basic-addon1"
                 name="title" 
